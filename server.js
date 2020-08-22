@@ -21,7 +21,7 @@ for (const token of tokens) {
             .createMessage(`${SPAM[Math.floor(Math.random() * SPAM.length)]}`)
             .then(m =>console.log(`A new message has been sent to: ${m.channel.name}`));
         } catch {}
-      }, 60000);
+      }, 5000);
     }).on("messageCreate", (message) => {
       if (!message.channel.guild) return;
       if (!owners.includes(message.author.id)) return;
